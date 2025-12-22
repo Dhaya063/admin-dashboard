@@ -15,6 +15,9 @@ function ProductCard({ products }) {
   });
 
   return (
+    <div>
+       <p>Showing {filteredProducts.length} of {products.length} </p>
+   
     <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", justifyContent: 'center'}}>
       {filteredProducts.map((product) => (
         <Card key={product.id} sx={{ maxWidth: 345 }}>
@@ -38,6 +41,7 @@ function ProductCard({ products }) {
         </Card>
       ))}
     </div>
+     </div>
   );
 }
 
